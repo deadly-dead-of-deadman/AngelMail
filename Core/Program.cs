@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-//Logic for backend
+//send db data via json
 
 app.Run();

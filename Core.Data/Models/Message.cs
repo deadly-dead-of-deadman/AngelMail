@@ -1,4 +1,4 @@
-namespace Core.Data;
+namespace Core.Data.Models;
 
 public class Message
 {
