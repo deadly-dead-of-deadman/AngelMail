@@ -4,14 +4,11 @@ using Avalonia.Markup.Xaml;
 
 namespace GUI.Views;
 
-public partial class Authorization : Window
+public partial class MailListView : UserControl
 {
-    public Authorization()
+    public MailListView()
     {
         InitializeComponent();
-#if DEBUG
-        this.AttachDevTools();
-#endif
     }
 
     private void InitializeComponent()

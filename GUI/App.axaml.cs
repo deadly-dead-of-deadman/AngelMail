@@ -1,8 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Core.Data.Services;
 using GUI.ViewModels;
 using GUI.Views;
+using Microsoft.EntityFrameworkCore;
 
 namespace GUI
 {
@@ -17,9 +19,10 @@ namespace GUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                var db = new Database();
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new MainWindowViewModel(db),
                 };
             }
 

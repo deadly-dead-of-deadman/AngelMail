@@ -5,6 +5,8 @@
       <map>
         <entry key="GUI/App.axaml" value="GUI/GUI.csproj" />
         <entry key="GUI/Views/Authorization.axaml" value="GUI/GUI.csproj" />
+        <entry key="GUI/Views/AuthorizationView.axaml" value="GUI/GUI.csproj" />
+        <entry key="GUI/Views/MailListView.axaml" value="GUI/GUI.csproj" />
         <entry key="GUI/Views/MainWindow.axaml" value="GUI/GUI.csproj" />
         <entry key="GUI/Views/SendMessage.axaml" value="GUI/GUI.csproj" />
       </map>

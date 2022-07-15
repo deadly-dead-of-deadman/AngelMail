@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GUI.Views.MailListView">
+    <DockPanel HorizontalAlignment="Center">
+        <Button DockPanel.Dock="Bottom"
+                Command="{Binding $parent[Window].DataContext.AddItem}">
+            Sign out
+        </Button>
+    
+        <ItemsControl Items="{Binding Messages}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="GhostWhite" BorderBrush="Silver" BorderThickness="1" CornerRadius="8,8,3,3">
+                        <StackPanel Margin="10" Width="300">
+                            <TextBlock Text ="{Binding SendTime}"></TextBlock>
+                            <TextBlock Text ="{Binding Sender}"></TextBlock>
+                            <TextBlock Text ="{Binding Reciever}"></TextBlock>
+                            <TextBlock Text ="{Binding Text}"></TextBlock>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
+</UserControl>
