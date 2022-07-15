@@ -27,7 +27,7 @@ namespace GUI.ViewModels
 
         public MailListViewModel List { get; }
 
-        public void AddItem()
+        public void SignOut()
         {
             var vm = new AuthorizationViewModel();
             Content = vm;

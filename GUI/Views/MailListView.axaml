@@ -5,8 +5,8 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="GUI.Views.MailListView">
     <DockPanel HorizontalAlignment="Center">
-        <Button DockPanel.Dock="Bottom"
-                Command="{Binding $parent[Window].DataContext.AddItem}">
+        <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center"
+                Command="{Binding $parent[Window].DataContext.SignOut}">
             Sign out
         </Button>
     
