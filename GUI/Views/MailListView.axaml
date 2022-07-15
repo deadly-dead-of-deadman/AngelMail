@@ -5,7 +5,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="GUI.Views.MailListView">
     <DockPanel HorizontalAlignment="Center">
-        <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center"
+        <Button DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="5"
                 Command="{Binding $parent[Window].DataContext.SignOut}">
             Sign out
         </Button>
@@ -15,10 +15,38 @@
                 <DataTemplate>
                     <Border Background="GhostWhite" BorderBrush="Silver" BorderThickness="1" CornerRadius="8,8,3,3">
                         <StackPanel Margin="10" Width="300">
-                            <TextBlock Text ="{Binding SendTime}"></TextBlock>
-                            <TextBlock Text ="{Binding Sender}"></TextBlock>
-                            <TextBlock Text ="{Binding Reciever}"></TextBlock>
-                            <TextBlock Text ="{Binding Text}"></TextBlock>
+                            <TextBlock HorizontalAlignment="Center">Message</TextBlock>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="Sent: {0}">
+                                        <Binding Path="SendTime" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="From: {0}">
+                                        <Binding Path="Sender" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="To: {0}">
+                                        <Binding Path="Reciever" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="Content: {0}">
+                                        <Binding Path="Text" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            
                         </StackPanel>
                     </Border>
                 </DataTemplate>
